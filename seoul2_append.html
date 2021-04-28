@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="euc-kr">
+     <title>상세페이지</title>
+
+     <link rel="stylesheet" href="AppendixPage.css">
+     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+     <script>
+          function initialize() {
+               var myLatlng = new google.maps.LatLng(37.57168346406849, 126.97918395951865);
+               var mapOptions = {
+                    zoom: 17,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+               }
+               var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+          }
+          var marker = new google.maps.Marker({
+               position: myLatlng,
+               map: map,
+               title: "청계천"
+          });
+          var infowindow = new google.maps.InfoWindow({
+               content: "<h1>청계천</h1>",
+               maxWidth: 300
+          }
+          );
+
+          google.maps.event.addListener(marker, 'click', function () {
+               infowindow.open(map, marker);
+          });
+     </script>
+</head>
+
+<body onload="initialize()">
+     <main>
+          <div class="text">
+               <div class="left">
+                    <div class="name">청계천</div>
+                    <div>
+                         <p class="title">주소 :</p> 서울특별시 종로구 서린동 청계천로 1<br>
+                    </div>
+                    <div>
+                         <p class="title">전화번호 :</p> 02-2290-7111<br>
+                    </div>
+                    <div>
+                         <p class="title">소개 :</p>
+                         2005년 10월 1일 2년여의 공사를 마치고 청계천 위에 놓여진 총 22개의 다리를 중심으로 정조반차도를 비롯한 역사적 자료를 복원한 도심 속 하천으로 개통하였다. 주요 다리로는 모전교·광통교·장통교·버들다리·두물다리 등이 있다.
+
+                         <br><br>
+                    </div>
+
+                    <div>
+                         <a href="http://naver.me/x50GMVgX" target="_blank">
+                            상세
+                              정보 보기</a>
+                         <a href="javascript:history. back();">돌아가기</a>
+                    </div>
+               </div>
+          </div>
+          <div class="right" id="map_canvas" style="width:50%; height:51rem;"></div>
+     </main>
+</body>
+
+</html>

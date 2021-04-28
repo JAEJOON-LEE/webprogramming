@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="euc-kr">
+     <title>상세페이지</title>
+
+     <link rel="stylesheet" href="AppendixPage.css">
+     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+     <script>
+          function initialize() {
+               var myLatlng = new google.maps.LatLng(35.15880194267429, 129.1603841666556);
+               var mapOptions = {
+                    zoom: 17,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+               }
+               var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+          }
+          var marker = new google.maps.Marker({
+               position: myLatlng,
+               map: map,
+               title: "해운대"
+          });
+          var infowindow = new google.maps.InfoWindow({
+               content: "<h1>해운대</h1>",
+               maxWidth: 300
+          }
+          );
+
+          google.maps.event.addListener(marker, 'click', function () {
+               infowindow.open(map, marker);
+          });
+     </script>
+</head>
+
+<body onload="initialize()">
+     <main>
+          <div class="text">
+               <div class="left">
+                    <div class="name">해운대</div>
+                    <div>
+                         <p class="title">주소 :</p> 부산광역시 해운대구 우동<br>
+                    </div>
+                    <div>
+                         <p class="title">전화번호 :</p> 051-749-7601<br>
+                    </div>
+                    <div>
+                         <p class="title">소개 :</p>
+                         해운대구는 해운대 해수욕장과 같이 모래사장이 넓게 펼쳐진 동해안 해변과 서핑을 즐기기 좋은 송정 등으로 잘 알려진 현대적인 지역입니다. SEA LIFE 부산아쿠아리움에서는 상어와 거북이를 볼 수 있으며, 부산 시립미술관에는 현대 한국과 전 세계의 작품이 전시되어 있습니다. 식사는 현지 가정식 백반부터 푸드 트럭과 세계 각국의 메뉴를 선보이는 고급 레스토랑까지 다양하게 즐길 수 있으며, 편안한 맥줏집과 세련된 칵테일 가게가 어우러져 있습니다.
+                         <br><br>
+                    </div>
+
+                    <div>
+                         <a href="http://naver.me/GcjWfo4L" target="_blank">
+                            상세
+                              정보 보기</a>
+                         <a href="javascript:history. back();">돌아가기</a>
+                    </div>
+               </div>
+          </div>
+          <div class="right" id="map_canvas" style="width:50%; height:51rem;"></div>
+     </main>
+</body>
+
+</html>

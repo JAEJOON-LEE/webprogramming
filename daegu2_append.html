@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="euc-kr">
+     <title>상세페이지</title>
+
+     <link rel="stylesheet" href="AppendixPage.css">
+     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+     <script>
+          function initialize() {
+               var myLatlng = new google.maps.LatLng(35.9910271305783, 128.69483619784316);
+               var mapOptions = {
+                    zoom: 17,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+               }
+               var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+          }
+          var marker = new google.maps.Marker({
+               position: myLatlng,
+               map: map,
+               title: "팔공산"
+          });
+          var infowindow = new google.maps.InfoWindow({
+               content: "<h1>팔공산</h1>",
+               maxWidth: 300
+          }
+          );
+
+          google.maps.event.addListener(marker, 'click', function () {
+               infowindow.open(map, marker);
+          });
+     </script>
+</head>
+
+<body onload="initialize()">
+     <main>
+          <div class="text">
+               <div class="left">
+                    <div class="name">팔공산</div>
+                    <div>
+                         <p class="title">주소 :</p> 경북 군위군 부계면 동산리<br>
+                    </div>
+                    <div>
+                         <p class="title">전화번호 :</p> 054-880-8300<br>
+                    </div>
+                    <div>
+                         <p class="title">소개 :</p>
+                         면적 122.1㎢(대구 30.6㎢, 칠곡군 29.7㎢, 군위군 21.7㎢, 경산시 10.6㎢, 영천시 29.0㎢). 1980년 5월에 도립공원으로 지정되었다. 팔공산(1,193m)은 대구 북쪽 끝에 위치하여 군위군 부계면(缶溪面) ·영천시 신녕면(新寧面)의 경계를 이루는 산으로, 최고봉인 비로봉(毘盧峰)을 중심으로 동봉(東峰:1,155m)과 서봉(西峰:1,041m)의 양 날개를 펴고 있다. 남동쪽으로는 염불봉(念佛峰) ·수봉(壽峰) ·인봉(印峰) ·노적봉(露積峰) ·관봉(冠峰) 등이 이어져 있고, 서쪽으로는 파계봉(把溪峰)을 넘어 가산(架山)에 이른다.
+                         
+                         <br><br>
+                    </div>
+
+                    <div>
+                         <a href="http://naver.me/FU3zQJNH" target="_blank">
+                            상세
+                              정보 보기</a>
+                         <a href="javascript:history. back();">돌아가기</a>
+                    </div>
+               </div>
+          </div>
+          <div class="right" id="map_canvas" style="width:50%; height:51rem;"></div>
+     </main>
+</body>
+
+</html>

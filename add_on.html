@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달력 만들기</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="navi.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="hamburger-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </header>
+
+    <main>
+        <div class="overlay">
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <pre> </pre>
+                    </li>
+                    <li><a href="seoul.html">Seoul</a></li>
+                    <li><a href="daegu.html">Daegu</a></li>
+                    <li><a href="busan.html">Busan</a></li>
+                    <li><a href="jeju.html">Jeju</a></li>
+                    <li>
+                        <pre> </pre>
+                    </li>
+                    <li><a href="#add_on.html">Add-On</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="calendarForm"></div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Go To</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5><pre> </pre></h5>
+                    <ul>
+                        <li><a href="seoul.html">Seoul</a></li>
+                        <li><a href="daegu.html">Daegu</a></li>
+                        <li><a href="busan.html">Busan</a></li>
+                        <li><a href="jeju.html">Jeju</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5><pre> </pre></h5>
+                    <ul>
+                        <li><a href="add_on.html">Add-On</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col myname">
+                    <h5><pre> </pre></h5>
+                    <ul>
+                        <li><p>Kyungpook National University</p></li>
+                        <li><p>Computer Science & Engineering</p></li>
+                        <li><p>Lee, Jaejoon / 2017116248</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="forCalendar.js"></script>
+    <script>
+    $(function () {
+        $('.hamburger-button').on('click', function (event) {
+            event.preventDefault();
+
+            $(this).toggleClass('active');
+            $('.overlay').toggleClass('visible');
+
+        });
+    });
+    </script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="euc-kr">
+     <title>상세페이지</title>
+
+     <link rel="stylesheet" href="AppendixPage.css">
+     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+     <script>
+          function initialize() {
+               var myLatlng = new google.maps.LatLng(37.566882745967284, 127.00945135370743);
+               var mapOptions = {
+                    zoom: 17,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+               }
+               var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+          }
+          var marker = new google.maps.Marker({
+               position: myLatlng,
+               map: map,
+               title: "동대문디자인플라자"
+          });
+          var infowindow = new google.maps.InfoWindow({
+               content: "<h1>동대문디자인플라자</h1>",
+               maxWidth: 300
+          }
+          );
+
+          google.maps.event.addListener(marker, 'click', function () {
+               infowindow.open(map, marker);
+          });
+     </script>
+</head>
+
+<body onload="initialize()">
+     <main>
+          <div class="text">
+               <div class="left">
+                    <div class="name">동대문디자인플라자</div>
+                    <div>
+                         <p class="title">주소 :</p> 서울특별시 중구 을지로7가 을지로 281<br>
+                    </div>
+                    <div>
+                         <p class="title">전화번호 :</p> 02-2153-0000<br>
+                    </div>
+                    <div>
+                         <p class="title">소개 :</p>
+                         미래 지향적인 디자인, 디자인 장터, 푸드 트럭을 갖춘 복합 공간으로 건축학적 랜드마크로 자리매김하고 있습니다.
+                         
+                         <br><br>
+                    </div>
+
+                    <div>
+                         <a href="http://naver.me/FeOCTmVS" target="_blank">
+                            상세
+                              정보 보기</a>
+                         <a href="javascript:history. back();">돌아가기</a>
+                    </div>
+               </div>
+          </div>
+          <div class="right" id="map_canvas" style="width:50%; height:51rem;"></div>
+     </main>
+</body>
+
+</html>

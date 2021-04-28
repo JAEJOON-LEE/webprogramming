@@ -23,21 +23,25 @@ ul{
 .footer{
     position: relative;
     width: 100%;
-    bottom: 0rem;
 	background-color: white;
     border-top: 2px solid black;
     display: block;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 .footer-col{
    width: 25%;
-   padding: 0 15px;
+   padding: 0;
+}
+.myname {
+	width: 20%;
+	padding: 0;
+	white-space:nowrap;
 }
 .footer-col h4{
 	font-size: 18px;
 	color: #03a9f4;
 	text-transform: capitalize;
-	margin-bottom: 35px;
+	margin-bottom: 25px;
 	font-weight: 500;
 	position: relative;
 }
@@ -47,17 +51,36 @@ ul{
 	left:0;
 	bottom: -10px;
 	background-color: black;
-	height: 2px;
+	height: 1px;
 	box-sizing: border-box;
-	width: 50px;
+	width: 50rem;
 }
+.footer-col h5{
+	font-size: 18px;
+	color: #03a9f4;
+	text-transform: capitalize;
+	margin-bottom: 25px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h5::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: black;
+	height: 1px;
+	box-sizing: border-box;
+	width: 50rem;
+}
+
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
 }
 .footer-col ul li a{
 	font-size: 16px;
 	text-transform: capitalize;
-	color: #ffffff;
+	color: black;
 	text-decoration: none;
 	font-weight: 300;
 	color: #bbbbbb;
@@ -65,9 +88,26 @@ ul{
 	transition: all 0.3s ease;
 }
 .footer-col ul li a:hover{
-	color: #ffffff;
+	color: black;
 	padding-left: 8px;
 }
+
+.footer-col ul li p{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: black;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+	overflow: visible;
+}
+
+.myname ul li p {
+	color:black;
+}
+
 .footer-col .social-links a{
 	display: inline-block;
 	height: 40px;

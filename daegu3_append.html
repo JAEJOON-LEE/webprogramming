@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="euc-kr">
+     <title>상세페이지</title>
+
+     <link rel="stylesheet" href="AppendixPage.css">
+     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+     <script>
+          function initialize() {
+               var myLatlng = new google.maps.LatLng(35.8905989385505, 128.61205041174247);
+               var mapOptions = {
+                    zoom: 17,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+               }
+               var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+          }
+          var marker = new google.maps.Marker({
+               position: myLatlng,
+               map: map,
+               title: "경북대학교"
+          });
+          var infowindow = new google.maps.InfoWindow({
+               content: "<h1>경북대학교</h1>",
+               maxWidth: 300
+          }
+          );
+
+          google.maps.event.addListener(marker, 'click', function () {
+               infowindow.open(map, marker);
+          });
+     </script>
+</head>
+
+<body onload="initialize()">
+     <main>
+          <div class="text">
+               <div class="left">
+                    <div class="name">경북대학교</div>
+                    <div>
+                         <p class="title">주소 :</p> 대구 북구 대학로 80 경북대학교<br>
+                    </div>
+                    <div>
+                         <p class="title">전화번호 :</p> 053-950-5114<br>
+                    </div>
+                    <div>
+                         <p class="title">소개 :</p>
+                         경북대학교(한자: 慶北大學校, 영어: Kyungpook National University)는 대구광역시와 경상북도에 소재한 국립대학이자, 의과대학, 치과대학, 경상대학, 수의과대학, 간호대학, 약학대학, 사범대학, IT대학, 법학전문대학원 등 단과대학과 전문대학원을 갖춘 대규모 종합대학이다. 영문약칭은 KNU이다.<br><br>
+                    </div>
+
+                    <div>
+                         <a href="http://naver.me/Ft8TVxsE" target="_blank">
+                            상세
+                              정보 보기</a>
+                         <a href="javascript:history. back();">돌아가기</a>
+                    </div>
+               </div>
+          </div>
+          <div class="right" id="map_canvas" style="width:50%; height:51rem;"></div>
+     </main>
+</body>
+
+</html>

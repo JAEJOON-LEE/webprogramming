@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="euc-kr">
+     <title>상세페이지</title>
+
+     <link rel="stylesheet" href="AppendixPage.css">
+     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+     <script>
+          function initialize() {
+               var myLatlng = new google.maps.LatLng(33.36196769327126, 126.53364116595783);
+               var mapOptions = {
+                    zoom: 17,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+               }
+               var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+          }
+          var marker = new google.maps.Marker({
+               position: myLatlng,
+               map: map,
+               title: "한라산"
+          });
+          var infowindow = new google.maps.InfoWindow({
+               content: "<h1>한라산</h1>",
+               maxWidth: 300
+          }
+          );
+
+          google.maps.event.addListener(marker, 'click', function () {
+               infowindow.open(map, marker);
+          });
+     </script>
+</head>
+
+<body onload="initialize()">
+     <main>
+          <div class="text">
+               <div class="left">
+                    <div class="name">한라산</div>
+                    <div>
+                         <p class="title">주소 :</p> 제주특별자치도 서귀포시 토평동 산15-1<br>
+                    </div>
+                    <div>
+                         <p class="title">전화번호 :</p> 064-713-9950<br>
+                    </div>
+                    <div>
+                         <p class="title">소개 :</p>
+                         높이 1,947.269m로 남한에서 가장 높은 산이다. 제3기 말∼제4기 초 용암이 분출하여 형성되었다. 현무암으로 이루어져 있으며 줄기는 제주도 중앙에서 동서로 뻗는다. 남쪽은 경사가 심한 반면 북쪽은 완만하고, 동서쪽은 비교적 높으면서도 평탄하다. 예로부터 부악(釜岳)·원산(圓山)·진산(鎭山)·선산(仙山)·두무악(頭無岳)·영주산(瀛州山)·부라산(浮羅山)·혈망봉(穴望峰)·여장군(女將軍) 등 많은 이름으로 불렸고, 민간 신앙에서는 금강산·지리산과 함께 삼신산(三神山) 가운데 하나로 치기도 한다.
+                     <br><br>
+                    </div>
+
+                    <div>
+                         <a href="https://m.place.naver.com/share?id=11796130&tabsPath=%2Fhome&appMode=detail" target="_blank">
+                            상세
+                              정보 보기</a>
+                         <a href="javascript:history. back();">돌아가기</a>
+                    </div>
+               </div>
+          </div>
+          <div class="right" id="map_canvas" style="width:50%; height:51rem;"></div>
+     </main>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="euc-kr">
+     <title>상세페이지</title>
+
+     <link rel="stylesheet" href="AppendixPage.css">
+     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+     <script>
+          function initialize() {
+               var myLatlng = new google.maps.LatLng(33.48887569747188, 126.80090848243887);
+               var mapOptions = {
+                    zoom: 17,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+               }
+               var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+          }
+          var marker = new google.maps.Marker({
+               position: myLatlng,
+               map: map,
+               title: "메이즈랜드"
+          });
+          var infowindow = new google.maps.InfoWindow({
+               content: "<h1>메이즈랜드</h1>",
+               maxWidth: 300
+          }
+          );
+
+          google.maps.event.addListener(marker, 'click', function () {
+               infowindow.open(map, marker);
+          });
+     </script>
+</head>
+
+<body onload="initialize()">
+     <main>
+          <div class="text">
+               <div class="left">
+                    <div class="name">메이즈랜드</div>
+                    <div>
+                         <p class="title">주소 :</p> 제주특별자치도 제주시 구좌읍 비자림로 2134-47 메이즈랜드<br>
+                    </div>
+                    <div>
+                         <p class="title">전화번호 :</p> 064-784-3838<br>
+                    </div>
+                    <div>
+                         <p class="title">소개 :</p>
+                         돌, 바람, 여자를 테마로 조성된 미로공원 <br>POINT1. 세계 최장 석축 미로입니다. <br>POINT2. 제주 신화 조각품들이 모여 있습니다. <br>POINT3. 걷기만 해도 건강해지는 건강미로공원 입니다. <br>POINT4. 출구를 찾아 떠나는 미로여행 <br>POINT5. 가장 제주다운 미로공원 <br>POINT6. 메이즈랜드 미로박물관
+                         <br>#세계최대_미로 #런닝맨
+                         <br><br>
+                    </div>
+
+                    <div>
+                         <a href="http://naver.me/xJNaNsaF" target="_blank">
+                            상세
+                              정보 보기</a>
+                         <a href="javascript:history. back();">돌아가기</a>
+                    </div>
+               </div>
+          </div>
+          <div class="right" id="map_canvas" style="width:50%; height:51rem;"></div>
+     </main>
+</body>
+
+</html>

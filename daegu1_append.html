@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="euc-kr">
+     <title>상세페이지</title>
+
+     <link rel="stylesheet" href="AppendixPage.css">
+     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+     <script>
+          function initialize() {
+               var myLatlng = new google.maps.LatLng(35.853933111752596, 128.56394596742223);
+               var mapOptions = {
+                    zoom: 17,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+               }
+               var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+          }
+          var marker = new google.maps.Marker({
+               position: myLatlng,
+               map: map,
+               title: "이월드"
+          });
+          var infowindow = new google.maps.InfoWindow({
+               content: "<h1>이월드</h1>",
+               maxWidth: 300
+          }
+          );
+
+          google.maps.event.addListener(marker, 'click', function () {
+               infowindow.open(map, marker);
+          });
+     </script>
+</head>
+
+<body onload="initialize()">
+     <main>
+          <div class="text">
+               <div class="left">
+                    <div class="name">이월드</div>
+                    <div>
+                         <p class="title">주소 :</p> 대구광역시 달서구 두류동 두류공원로 200<br>
+                    </div>
+                    <div>
+                         <p class="title">전화번호 :</p> 053-620-0001<br>
+                    </div>
+                    <div>
+                         <p class="title">소개 :</p>
+                         이월드는 1987년 10월 타워건립 및 종합테마파크 조성공사 재 착공을 시작으로 1993년 종합 테마파크 마스트플랜을 확정한 후 1995년 3월 개장한 폭포, 분수, 조명, 꽃으로 장식된 유럽식 도시공원으로 남녀노소 누구나 즐길 수 있는 놀이기구, 전시. 예술공간, 깔끔한 식당가 등이 마련되어 있다.
+                         <br><br>
+                    </div>
+
+                    <div>
+                         <a href="http://naver.me/GPrFFX84" target="_blank">
+                            상세
+                              정보 보기</a>
+                         <a href="javascript:history. back();">돌아가기</a>
+                    </div>
+               </div>
+          </div>
+          <div class="right" id="map_canvas" style="width:50%; height:51rem;"></div>
+     </main>
+</body>
+
+</html>
