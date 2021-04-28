@@ -1,0 +1,187 @@
+ @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+ *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+  /* Hamburger button styles. */
+.toggle
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+.toggle.active
+{
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+
+/* Hamburger button styles. */
+.hamburger-button {
+	position: fixed;
+	transition: .3s ease-in-out;
+	width: 30px;
+	height: 20px;
+	display: block;
+	top: 2rem;
+	right: 2rem;
+	z-index: 100;
+  cursor: pointer;
+}
+
+	.hamburger-button span {
+		position: absolute;
+		height: 3px;
+		border-radius: 4px;
+		width: 100%;
+		background-color: black;
+		top: 0;
+		transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+    cursor: pointer;
+	}
+
+		.hamburger-button span:nth-child(1) {
+			top: 0px;
+		}
+
+		.hamburger-button span:nth-child(2),
+		.hamburger-button span:nth-child(3) {
+			top: 10px;
+		}
+
+		.hamburger-button span:nth-child(4) {
+			top: 20px;
+		}
+
+	.hamburger-button.active span {
+		background-color: #FFF;
+    cursor: pointer;
+	}
+
+		.hamburger-button.active span:nth-child(1),
+		.hamburger-button.active span:nth-child(4) {
+			opacity: 0;
+		}
+
+		.hamburger-button.active span:nth-child(2) {
+			transform: rotate(45deg);
+		}
+
+		.hamburger-button.active span:nth-child(3) {
+			transform: rotate(-45deg);
+		}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 1rem 0;
+  opacity: 0;
+  font-size: larger;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+nav ul li a:hover {
+  opacity: 1;
+}
+ 
+/* 메뉴가 내려오게 */
+  .overlay {
+    position: fixed;
+    background: url(PexelsVideos_background5.mp4);
+    top:0;
+    left:0;
+    width:100%;
+    height:0;
+    opacity: 0;
+    visibility: visible;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3;
+    z-index: 1;
+  } 
+/* overlay 작동할 떄 */
+  @keyframes fadeInLeft {
+    0% {
+      opacity:0;
+      transform:translateX(-25%);
+    }
+    100% {
+      opacity:1;
+      transform:translateX(0%);
+    }
+  }
+
+  .overlay.visible {
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .overlay.visible nav ul li {
+    animation:fadeInLeft 0.3s ease forwards;
+  }
+
+  .overlay.visible nav ul li:nth-child(1){
+    animation-delay:0.23s;
+  }
+  .overlay.visible nav ul li:nth-child(3){
+    animation-delay:0.26s;
+  }
+  .overlay.visible nav ul li:nth-child(4){
+    animation-delay:0.29s;
+  }
+  .overlay.visible nav ul li:nth-child(5){
+    animation-delay:0.32s;
+  }
+  .overlay.visible nav ul li:nth-child(6){
+    animation-delay:0.35s;
+  }
+  .overlay.visible nav ul li:nth-child(8){
+    animation-delay:0.38s;
+  }
+
+  .insta {
+    z-index: -1;
+    padding-top: 100px;
+  }
+
+  

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="navi.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="tab.css">
+    <link rel="stylesheet" href="slide.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="hamburger-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </header>
+
+    <main>
+        <div class="overlay">
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <pre> </pre>
+                    </li>
+                    <li><a href="seoul.html">Seoul</a></li>
+                    <li><a href="daegu.html">Daegu</a></li>
+                    <li><a href="busan.html">Busan</a></li>
+                    <li><a href="jeju.html">Jeju</a></li>
+                    <li>
+                        <pre> </pre>
+                    </li>
+                    <li><a href="#">exp</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div style="margin: 2rem;">
+            <pre>
+
+
+
+
+
+
+            </pre>
+        </div>
+        <div class="tabs">
+            <div class="tab-header">
+              <div class="active">Spot</div>
+              <div>Restaurant</div>
+              <div>Cafe</div>
+              <div>Hotel</div>
+            </div>
+            <div class="tab-indicator"></div>
+            <div class="tab-body">
+              <div class="active">
+                <h1>Spot</h1>
+                    <div class="section">
+                        <input type="radio" name="slide" id="slide01" checked>
+                        <input type="radio" name="slide" id="slide02">
+                        <input type="radio" name="slide" id="slide03">
+                        <div class="slidewrap">
+                            <ul class="slidelist">
+                                <!-- 슬라이드 영역 -->
+                                <li class="slideitem">
+                                    <a>
+                                        <img src = "/images/busan_1.jpg">
+                                        <div class="textbox">
+                                            <h3>해운대</h3>
+                                            <p>Haeundae</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slideitem">
+                                    <a>
+                                        <img src = "/images/busan_2.jpeg">
+                                        <div class="textbox">
+                                            <h3>광안리</h3>
+                                            <p>Gwanganli</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slideitem">
+                                    <a>
+                                        <img src = "/images/busan_3.jpeg">
+                                        <div class="textbox">
+                                            <h3>태종대</h3>
+                                            <p>Taejongdae</p>
+                                        </div>
+                                    </a>
+                                </li class="slideitem">
+                    
+                                <!-- 좌,우 슬라이드 버튼 -->
+                                <div class="slide-control">
+                                    <div>
+                                        <label for="slide03" class="left"></label>
+                                        <label for="slide02" class="right"></label>
+                                    </div>
+                                    <div>
+                                        <label for="slide01" class="left"></label>
+                                        <label for="slide03" class="right"></label>
+                                    </div>
+                                    <div>
+                                        <label for="slide02" class="left"></label>
+                                        <label for="slide01" class="right"></label>
+                                    </div>
+                                </div>
+                    
+                            </ul>
+                            <!-- 페이징 -->
+                            <ul class="slide-pagelist">
+                                <li><label for="slide01"></label></li>
+                                <li><label for="slide02"></label></li>
+                                <li><label for="slide03"></label></li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+                <div>
+                    <h1>Restaurant</h1>
+                    <div class="section">
+                        <input type="radio" name="slide1" id="slide04" checked>
+                        <input type="radio" name="slide1" id="slide05">
+                        <input type="radio" name="slide1" id="slide06">
+                        <div class="slidewrap">
+                            <ul class="slidelist">
+
+                                <li class="slideitem">
+                                    <a>
+                                        <img src = "/images/busan_res1.jpg">
+                                        <div class="textbox">
+                                            <h3>금수복국</h3>
+                                            <p>Geumsu bokguk</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slideitem">
+                                    <a>
+                                        <img src = "/images/busan_res2.jpg">
+                                        <div class="textbox">
+                                            <h3>삼삼횟집</h3>
+                                            <p>Samsam Sashimi Restaurant</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slideitem">
+                                    <a>
+                                        <img src = "/images/busan_res3.jpg">
+                                        <div class="textbox">
+                                            <h3>그집</h3>
+                                            <p>The house</p>
+                                        </div>
+                                    </a>
+                                </li class="slideitem">
+                    
+                                <div class="slide-control">
+                                    <div>
+                                        <label for="slide06" class="left"></label>
+                                        <label for="slide05" class="right"></label>
+                                    </div>
+                                    <div>
+                                        <label for="slide04" class="left"></label>
+                                        <label for="slide06" class="right"></label>
+                                    </div>
+                                    <div>
+                                        <label for="slide05" class="left"></label>
+                                        <label for="slide04" class="right"></label>
+                                    </div>
+                                </div>
+                    
+                            </ul>
+
+                            <ul class="slide-pagelist">
+                                <li><label for="slide04"></label></li>
+                                <li><label for="slide05"></label></li>
+                                <li><label for="slide06"></label></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+              <div>
+                <h1>Cafe</h1>
+                <div class="section">
+                    <input type="radio" name="slide2" id="slide07" checked>
+                    <input type="radio" name="slide2" id="slide08">
+                    <input type="radio" name="slide2" id="slide09">
+                    <div class="slidewrap">
+                        <ul class="slidelist">
+
+                            <li class="slideitem">
+                                <a>
+                                    <img src = "/images/busan_cafe1.jpg">
+                                    <div class="textbox">
+                                        <h3>비비비당</h3>
+                                        <p>Bibibidang</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="slideitem">
+                                <a>
+                                    <img src = "/images/busan_cafe2.jpeg">
+                                    <div class="textbox">
+                                        <h3>록키마운틴초콜릿팩토리</h3>
+                                        <p>Rocky Mountain Chocolate Factory</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="slideitem">
+                                <a>
+                                    <img src = "/images/busan_cafe3.jpg">
+                                    <div class="textbox">
+                                        <h3>랑데자뷰</h3>
+                                        <p>Rendeja-vous </p>
+                                    </div>
+                                </a>
+                            </li class="slideitem">
+                
+                            <div class="slide-control">
+                                <div>
+                                    <label for="slide09" class="left"></label>
+                                    <label for="slide08" class="right"></label>
+                                </div>
+                                <div>
+                                    <label for="slide07" class="left"></label>
+                                    <label for="slide09" class="right"></label>
+                                </div>
+                                <div>
+                                    <label for="slide08" class="left"></label>
+                                    <label for="slide07" class="right"></label>
+                                </div>
+                            </div>
+                
+                        </ul>
+
+                        <ul class="slide-pagelist">
+                            <li><label for="slide07"></label></li>
+                            <li><label for="slide08"></label></li>
+                            <li><label for="slide09"></label></li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+              <div>
+                <h1>Hotel</h1>
+                <div class="section">
+                    <input type="radio" name="slide3" id="slide10" checked>
+                    <input type="radio" name="slide3" id="slide11">
+                    <input type="radio" name="slide3" id="slide12">
+                    <div class="slidewrap">
+                        <ul class="slidelist">
+
+                            <li class="slideitem">
+                                <a>
+                                    <img src = "/images/busan_hotel1.jpg">
+                                    <div class="textbox">
+                                        <h3>신라스테이 해운대</h3>
+                                        <p>Shilla Stay Haeundae</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="slideitem">
+                                <a>
+                                    <img src = "/images/busan_hotel2.jpg">
+                                    <div class="textbox">
+                                        <h3>엘시티 레지던스</h3>
+                                        <p>LCT Residence</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="slideitem">
+                                <a>
+                                    <img src = "/images/busan_hotel3.jpg">
+                                    <div class="textbox">
+                                        <h3>웨스틴 조선 부산</h3>
+                                        <p>The Westin Josun Busan</p>
+                                    </div>
+                                </a>
+                            </li class="slideitem">
+                
+                            <div class="slide-control">
+                                <div>
+                                    <label for="slide12" class="left"></label>
+                                    <label for="slide11" class="right"></label>
+                                </div>
+                                <div>
+                                    <label for="slide10" class="left"></label>
+                                    <label for="slide12" class="right"></label>
+                                </div>
+                                <div>
+                                    <label for="slide11" class="left"></label>
+                                    <label for="slide10" class="right"></label>
+                                </div>
+                            </div>
+                
+                        </ul>
+
+                        <ul class="slide-pagelist">
+                            <li><label for="slide10"></label></li>
+                            <li><label for="slide11"></label></li>
+                            <li><label for="slide12"></label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+
+        </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+        $(function () {
+            $('.hamburger-button').on('click', function (event) {
+                event.preventDefault();
+
+                $(this).toggleClass('active');
+                $('.overlay').toggleClass('visible');
+
+            });
+        });
+
+        let tabs = document.querySelector(".tabs");
+        let tabHeader = tabs.querySelector(".tab-header");
+        let tabBody = tabs.querySelector(".tab-body");
+        let tabIndicator = tabs.querySelector(".tab-indicator");
+        let tabHeaderNodes = tabs.querySelectorAll(".tab-header > div");
+        let tabBodyNodes = tabs.querySelectorAll(".tab-body > div");
+
+        for (let i = 0; i < tabHeaderNodes.length; i++) {
+            tabHeaderNodes[i].addEventListener("click", function () {
+                tabHeader.querySelector(".active").classList.remove("active");
+                tabHeaderNodes[i].classList.add("active");
+                tabBody.querySelector(".active").classList.remove("active");
+                tabBodyNodes[i].classList.add("active");
+                tabIndicator.style.left = `calc(calc(calc(25% - 5px) * ${i}) + 10px)`;
+            });
+        }
+
+    </script>
+</body>
+</html>
