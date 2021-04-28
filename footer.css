@@ -71,7 +71,6 @@ ul{
 	background-color: black;
 	height: 1px;
 	box-sizing: border-box;
-	width: 50rem;
 }
 
 .footer-col ul li:not(:last-child){

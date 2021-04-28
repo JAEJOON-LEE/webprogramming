@@ -89,3 +89,8 @@ div.right {
     color: #03a9f4;
     font-size: 30px;
 }
+
+#map_canvas {
+  width: 50%; 
+  height: 49.5rem;
+}
