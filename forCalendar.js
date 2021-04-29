@@ -30,10 +30,17 @@ function calendarMaker(target, date) {
     }
 
     //날짜 채우기
+    var today = new Date();
     for (i = 1; i <= thisLastDay.getDate(); i++) {
-        if (cnt % 7 == 0) { tag += "<tr>"; }
-
-        tag += "<td>" + i + "</td>";
+        if (cnt % 7 == 0) { 
+            tag += "<tr>"; 
+        }
+        if(today.getMonth() == nowDate.getMonth() && cnt == nowDate.getDate()){
+            tag += "<td style='color:orange; font-weight:bold'>" + cnt + "</td>";
+        }
+        else{
+            tag += "<td>" + i + "</td>";
+        }
         cnt++;
         if (cnt % 7 == 0) {
             tag += "</tr>";
@@ -43,6 +50,8 @@ function calendarMaker(target, date) {
     calMoveEvtFn();
 
     function assembly(year, month) {
+
+        
         var calendar_html_code =
             "<table class='custom_calendar_table'>" +
             "<colgroup>" +
