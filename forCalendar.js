@@ -13,7 +13,7 @@ function calendarMaker(target, date) {
         var month = nowDate.getMonth() + 1;
         $(target).empty().append(assembly(year, month));
     } else {
-        console.error("custom_calendar Target is empty!!!");
+        console.error("error");
         return;
     }
 

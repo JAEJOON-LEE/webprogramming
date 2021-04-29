@@ -13,7 +13,8 @@
         .money {
             text-align: center;
             font-family: 'Poppins', sans-serif;
-            padding-bottom: 2rem;
+            padding-top:5rem;
+            padding-bottom: 2.5%;
         }
 
         .money a {
@@ -34,6 +35,15 @@
             letter-spacing: 6px;
             color: #03a9f4;
         }
+
+        .clock {
+            text-align: center;
+            padding-bottom:20%;
+        }
+        .date {
+            text-align: center;
+            padding-top:2.5%;
+        }
     </style>
 </head>
 
@@ -48,6 +58,7 @@
     </header>
 
     <main>
+
         <div class="overlay">
             <nav class="menu">
                 <ul>
@@ -66,6 +77,9 @@
                 </ul>
             </nav>
         </div>
+
+        <h3 class="date"></h3>
+        <h2 class="clock" style="color:#03a9f4">It's time TO GO</h2>
         <div id="calendarForm"></div>
 
         <div class="money">
@@ -128,7 +142,8 @@
     </footer>
 
     <script src="forCalendar.js"></script>
-
+    <script src="clock.js"></script>
+    
     <script>
         $(function () {
             $('.hamburger-button').on('click', function (event) {
@@ -139,8 +154,6 @@
 
             });
         });
-
-
 
     </script>
     <!-- Code injected by live-server -->
@@ -179,8 +192,6 @@
         else {
             console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
         }
-
-
 
     </script>
 </body>

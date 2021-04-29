@@ -11,6 +11,51 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="tab.css">
     <link rel="stylesheet" href="slide.css">
+    <style>
+        .clock {
+            text-align: center;
+            padding-bottom: 7.5%;
+        }
+
+        .date {
+            text-align: center;
+        }
+
+        .timeTogo {
+            text-align: center;
+            padding-top: 1.5%;
+
+            overflow: hidden;
+            font-size: 100%;
+            border-right: .1em solid #fff;
+            white-space: nowrap;
+            
+            letter-spacing: .15em;
+            animation: typing 2s steps(25), blink-caret .75s step-end;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 9em;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: black
+            }
+
+            50% {
+                border-color: black;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -43,26 +88,21 @@
             </nav>
         </div>
         <div style="margin: 2rem;">
-            <pre>
-
-
-
-
-
-
-            </pre>
+            <h1 class="timeTogo">지금은 떠날 시간</h1>
+            <h3 class="date"></h3>
+            <h2 class="clock" style="color:#03a9f4">It's time TO GO</h2>
         </div>
         <div class="tabs">
             <div class="tab-header">
-              <div class="active">Spot</div>
-              <div>Restaurant</div>
-              <div>Cafe</div>
-              <div>Hotel</div>
+                <div class="active">Spot</div>
+                <div>Restaurant</div>
+                <div>Cafe</div>
+                <div>Hotel</div>
             </div>
             <div class="tab-indicator"></div>
             <div class="tab-body">
-              <div class="active">
-                <h1>Spot</h1>
+                <div class="active">
+                    <h1>Spot</h1>
                     <div class="section">
                         <input type="radio" name="slide" id="slide01" checked>
                         <input type="radio" name="slide" id="slide02">
@@ -72,7 +112,7 @@
                                 <!-- 슬라이드 영역 -->
                                 <li class="slideitem">
                                     <a href="seoul1_append.html">
-                                        <img src = "./images/seoul_1.jpeg">
+                                        <img src="./images/seoul_1.jpeg">
                                         <div class="textbox">
                                             <h3>경복궁</h3>
                                             <p>Gyeongbokgung</p>
@@ -81,7 +121,7 @@
                                 </li>
                                 <li class="slideitem">
                                     <a href="seoul2_append.html">
-                                        <img src = "./images/seoul_2.jpeg">
+                                        <img src="./images/seoul_2.jpeg">
                                         <div class="textbox">
                                             <h3>청계천</h3>
                                             <p>Cheonggyecheon</p>
@@ -90,14 +130,14 @@
                                 </li>
                                 <li class="slideitem">
                                     <a href="seoul3_append.html">
-                                        <img src = "./images/seoul_3.jpeg">
+                                        <img src="./images/seoul_3.jpeg">
                                         <div class="textbox">
                                             <h3>동대문디자인플라자</h3>
                                             <p>DDP: Dongdamun Design Plaza</p>
                                         </div>
                                     </a>
                                 </li class="slideitem">
-                    
+
                                 <!-- 좌,우 슬라이드 버튼 -->
                                 <div class="slide-control">
                                     <div>
@@ -113,7 +153,7 @@
                                         <label for="slide01" class="right"></label>
                                     </div>
                                 </div>
-                    
+
                             </ul>
                             <!-- 페이징 -->
                             <ul class="slide-pagelist">
@@ -123,9 +163,9 @@
                             </ul>
                         </div>
                     </div>
-            </div>
+                </div>
                 <div>
-                    <h1 name = "restaurant">Restaurant</h1>
+                    <h1 name="restaurant">Restaurant</h1>
                     <div class="section">
                         <input type="radio" name="slide1" id="slide04" checked>
                         <input type="radio" name="slide1" id="slide05">
@@ -134,8 +174,9 @@
                             <ul class="slidelist">
 
                                 <li class="slideitem">
-                                    <a href = "https://m.place.naver.com/share?id=1984529154&tabsPath=%2Fhome&appMode=detail" target="_blank">
-                                        <img src = "./images/seoul_res1.jpg">
+                                    <a href="https://m.place.naver.com/share?id=1984529154&tabsPath=%2Fhome&appMode=detail"
+                                        target="_blank">
+                                        <img src="./images/seoul_res1.jpg">
                                         <div class="textbox">
                                             <h3>팔당반점</h3>
                                             <p>Paldang Chinese Restaurant</p>
@@ -143,8 +184,8 @@
                                     </a>
                                 </li>
                                 <li class="slideitem">
-                                    <a href = "http://naver.me/5AmfZ5mt" target="_blank">
-                                        <img src = "./images/seoul_res2.jpg">
+                                    <a href="http://naver.me/5AmfZ5mt" target="_blank">
+                                        <img src="./images/seoul_res2.jpg">
                                         <div class="textbox">
                                             <h3>텍사스로드하우스</h3>
                                             <p>Texas Road House</p>
@@ -152,15 +193,15 @@
                                     </a>
                                 </li>
                                 <li class="slideitem">
-                                    <a href = "http://naver.me/5xlnLXxW" target="_blank">
-                                        <img src = "./images/seoul_res3-2.png">
+                                    <a href="http://naver.me/5xlnLXxW" target="_blank">
+                                        <img src="./images/seoul_res3-2.png">
                                         <div class="textbox">
                                             <h3>가온</h3>
                                             <p>Gaon</p>
                                         </div>
                                     </a>
                                 </li class="slideitem">
-                    
+
                                 <div class="slide-control">
                                     <div>
                                         <label for="slide06" class="left"></label>
@@ -175,7 +216,7 @@
                                         <label for="slide04" class="right"></label>
                                     </div>
                                 </div>
-                    
+
                             </ul>
 
                             <ul class="slide-pagelist">
@@ -186,134 +227,134 @@
                         </div>
                     </div>
                 </div>
-              <div>
-                <h1>Cafe</h1>
-                <div class="section">
-                    <input type="radio" name="slide2" id="slide07" checked>
-                    <input type="radio" name="slide2" id="slide08">
-                    <input type="radio" name="slide2" id="slide09">
-                    <div class="slidewrap">
-                        <ul class="slidelist">
+                <div>
+                    <h1>Cafe</h1>
+                    <div class="section">
+                        <input type="radio" name="slide2" id="slide07" checked>
+                        <input type="radio" name="slide2" id="slide08">
+                        <input type="radio" name="slide2" id="slide09">
+                        <div class="slidewrap">
+                            <ul class="slidelist">
 
-                            <li class="slideitem">
-                                <a href = "http://naver.me/FFvins6E" target="_blank">
-                                    <img src = "./images/seoul_cafe1.jpeg">
-                                    <div class="textbox">
-                                        <h3>블루보틀</h3>
-                                        <p>Blue Bottle</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slideitem">
-                                <a href = "http://naver.me/GlVmtWQ8" target="_blank">
-                                    <img src = "./images/seoul_cafe2.jpg">
-                                    <div class="textbox">
-                                        <h3>그림카페</h3>
-                                        <p>Geurim Cafe</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slideitem">
-                                <a href = "http://naver.me/FyexeSsz" target="_blank">
-                                    <img src = "./images/seoul_cafe3.jpg">
-                                    <div class="textbox">
-                                        <h3>제이히든하우스</h3>
-                                        <p>J Hidden House</p>
-                                    </div>
-                                </a>
-                            </li class="slideitem">
-                
-                            <div class="slide-control">
-                                <div>
-                                    <label for="slide09" class="left"></label>
-                                    <label for="slide08" class="right"></label>
-                                </div>
-                                <div>
-                                    <label for="slide07" class="left"></label>
-                                    <label for="slide09" class="right"></label>
-                                </div>
-                                <div>
-                                    <label for="slide08" class="left"></label>
-                                    <label for="slide07" class="right"></label>
-                                </div>
-                            </div>
-                
-                        </ul>
+                                <li class="slideitem">
+                                    <a href="http://naver.me/FFvins6E" target="_blank">
+                                        <img src="./images/seoul_cafe1.jpeg">
+                                        <div class="textbox">
+                                            <h3>블루보틀</h3>
+                                            <p>Blue Bottle</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slideitem">
+                                    <a href="http://naver.me/GlVmtWQ8" target="_blank">
+                                        <img src="./images/seoul_cafe2.jpg">
+                                        <div class="textbox">
+                                            <h3>그림카페</h3>
+                                            <p>Geurim Cafe</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slideitem">
+                                    <a href="http://naver.me/FyexeSsz" target="_blank">
+                                        <img src="./images/seoul_cafe3.jpg">
+                                        <div class="textbox">
+                                            <h3>제이히든하우스</h3>
+                                            <p>J Hidden House</p>
+                                        </div>
+                                    </a>
+                                </li class="slideitem">
 
-                        <ul class="slide-pagelist">
-                            <li><label for="slide07"></label></li>
-                            <li><label for="slide08"></label></li>
-                            <li><label for="slide09"></label></li>
-                        </ul>
+                                <div class="slide-control">
+                                    <div>
+                                        <label for="slide09" class="left"></label>
+                                        <label for="slide08" class="right"></label>
+                                    </div>
+                                    <div>
+                                        <label for="slide07" class="left"></label>
+                                        <label for="slide09" class="right"></label>
+                                    </div>
+                                    <div>
+                                        <label for="slide08" class="left"></label>
+                                        <label for="slide07" class="right"></label>
+                                    </div>
+                                </div>
+
+                            </ul>
+
+                            <ul class="slide-pagelist">
+                                <li><label for="slide07"></label></li>
+                                <li><label for="slide08"></label></li>
+                                <li><label for="slide09"></label></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-              </div>
-              <div>
-                <h1>Hotel</h1>
-                <div class="section">
-                    <input type="radio" name="slide3" id="slide10" checked>
-                    <input type="radio" name="slide3" id="slide11">
-                    <input type="radio" name="slide3" id="slide12">
-                    <div class="slidewrap">
-                        <ul class="slidelist">
+                <div>
+                    <h1>Hotel</h1>
+                    <div class="section">
+                        <input type="radio" name="slide3" id="slide10" checked>
+                        <input type="radio" name="slide3" id="slide11">
+                        <input type="radio" name="slide3" id="slide12">
+                        <div class="slidewrap">
+                            <ul class="slidelist">
 
-                            <li class="slideitem">
-                                <a href = "http://naver.me/IG6qdb1P" target="_blank">
-                                    <img src = "./images/seoul_hotel1.jpg">
-                                    <div class="textbox">
-                                        <h3>시그니엘 서울</h3>
-                                        <p>Signiel Seoul</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slideitem">
-                                <a href = "http://naver.me/F8KnrYuu" target="_blank">
-                                    <img src = "./images/seoul_hotel2.jpg">
-                                    <div class="textbox">
-                                        <h3>비스타 워커힐 서울</h3>
-                                        <p>Vista Walkerhill Seoul</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="slideitem">
-                                <a href = "http://naver.me/FmgVEQfe" target="_blank">
-                                    <img src = "./images/seoul_hotel3.jpg">
-                                    <div class="textbox">
-                                        <h3>그랜드 하야트 서울</h3>
-                                        <p>Grand Hyatt Seoul</p>
-                                    </div>
-                                </a>
-                            </li class="slideitem">
-                
-                            <div class="slide-control">
-                                <div>
-                                    <label for="slide12" class="left"></label>
-                                    <label for="slide11" class="right"></label>
-                                </div>
-                                <div>
-                                    <label for="slide10" class="left"></label>
-                                    <label for="slide12" class="right"></label>
-                                </div>
-                                <div>
-                                    <label for="slide11" class="left"></label>
-                                    <label for="slide10" class="right"></label>
-                                </div>
-                            </div>
-                
-                        </ul>
+                                <li class="slideitem">
+                                    <a href="http://naver.me/IG6qdb1P" target="_blank">
+                                        <img src="./images/seoul_hotel1.jpg">
+                                        <div class="textbox">
+                                            <h3>시그니엘 서울</h3>
+                                            <p>Signiel Seoul</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slideitem">
+                                    <a href="http://naver.me/F8KnrYuu" target="_blank">
+                                        <img src="./images/seoul_hotel2.jpg">
+                                        <div class="textbox">
+                                            <h3>비스타 워커힐 서울</h3>
+                                            <p>Vista Walkerhill Seoul</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slideitem">
+                                    <a href="http://naver.me/FmgVEQfe" target="_blank">
+                                        <img src="./images/seoul_hotel3.jpg">
+                                        <div class="textbox">
+                                            <h3>그랜드 하야트 서울</h3>
+                                            <p>Grand Hyatt Seoul</p>
+                                        </div>
+                                    </a>
+                                </li class="slideitem">
 
-                        <ul class="slide-pagelist">
-                            <li><label for="slide10"></label></li>
-                            <li><label for="slide11"></label></li>
-                            <li><label for="slide12"></label></li>
-                        </ul>
+                                <div class="slide-control">
+                                    <div>
+                                        <label for="slide12" class="left"></label>
+                                        <label for="slide11" class="right"></label>
+                                    </div>
+                                    <div>
+                                        <label for="slide10" class="left"></label>
+                                        <label for="slide12" class="right"></label>
+                                    </div>
+                                    <div>
+                                        <label for="slide11" class="left"></label>
+                                        <label for="slide10" class="right"></label>
+                                    </div>
+                                </div>
+
+                            </ul>
+
+                            <ul class="slide-pagelist">
+                                <li><label for="slide10"></label></li>
+                                <li><label for="slide11"></label></li>
+                                <li><label for="slide12"></label></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
-          </div>
+        </div>
 
-        </main>
+    </main>
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -325,7 +366,9 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h5><pre> </pre></h5>
+                    <h5>
+                        <pre> </pre>
+                    </h5>
                     <ul>
                         <li><a href="seoul.html">Seoul</a></li>
                         <li><a href="daegu.html">Daegu</a></li>
@@ -334,22 +377,33 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h5><pre> </pre></h5>
+                    <h5>
+                        <pre> </pre>
+                    </h5>
                     <ul>
                         <li><a href="add_on.html">Add-On</a></li>
                     </ul>
                 </div>
                 <div class="footer-col myname">
-                    <h5><pre> </pre></h5>
+                    <h5>
+                        <pre> </pre>
+                    </h5>
                     <ul>
-                        <li><p>Kyungpook National University</p></li>
-                        <li><p>Computer Science & Engineering</p></li>
-                        <li><p>Lee, Jaejoon / 2017116248</p></li>
+                        <li>
+                            <p>Kyungpook National University</p>
+                        </li>
+                        <li>
+                            <p>Computer Science & Engineering</p>
+                        </li>
+                        <li>
+                            <p>Lee, Jaejoon / 2017116248</p>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="clock.js"></script>
     <script>
 
         $(function () {
@@ -381,4 +435,5 @@
 
     </script>
 </body>
+
 </html>
