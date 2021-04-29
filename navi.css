@@ -126,6 +126,7 @@ nav ul li a:hover {
   .overlay {
     position: fixed;
     background: url(pexels_background_img3.jpg);
+    webkit-print-color-adjust:exact;
     background-size: cover;
     top:0;
     left:0;
