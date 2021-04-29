@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,34 @@
     <link rel="stylesheet" href="calendar.css">
     <link rel="stylesheet" href="navi.css">
     <link rel="stylesheet" href="footer.css">
+    <style>
+        .money {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            padding-bottom: 2rem;
+        }
+
+        .money a {
+            display: inline-block;
+            font-size: 1em;
+            background: white;
+            padding: 10px 30px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 10px;
+            color: #111;
+            letter-spacing: 2px;
+            transition: 0.2s;
+        }
+
+        .money a:hover {
+            letter-spacing: 6px;
+            color: #03a9f4;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <a href="#" class="hamburger-button">
@@ -39,6 +67,16 @@
             </nav>
         </div>
         <div id="calendarForm"></div>
+
+        <div class="money">
+            <script type="text/javascript"
+                src="https://www.exchange-rates.org/GetCustomContent.aspx?sid=CC000QGZX&amp;type=CurrencyConverter&amp;stk=059P0KN1CD"
+                charset="utf-8">
+                </script>
+            <div>
+                <a href="https://www.exchange-rates.org/">더 많은 환율 확인하기</a>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">
@@ -51,7 +89,9 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h5><pre> </pre></h5>
+                    <h5>
+                        <pre> </pre>
+                    </h5>
                     <ul>
                         <li><a href="seoul.html">Seoul</a></li>
                         <li><a href="daegu.html">Daegu</a></li>
@@ -60,17 +100,27 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h5><pre> </pre></h5>
+                    <h5>
+                        <pre> </pre>
+                    </h5>
                     <ul>
                         <li><a href="add_on.html">Add-On</a></li>
                     </ul>
                 </div>
                 <div class="footer-col myname">
-                    <h5><pre> </pre></h5>
+                    <h5>
+                        <pre> </pre>
+                    </h5>
                     <ul>
-                        <li><p>Kyungpook National University</p></li>
-                        <li><p>Computer Science & Engineering</p></li>
-                        <li><p>Lee, Jaejoon / 2017116248</p></li>
+                        <li>
+                            <p>Kyungpook National University</p>
+                        </li>
+                        <li>
+                            <p>Computer Science & Engineering</p>
+                        </li>
+                        <li>
+                            <p>Lee, Jaejoon / 2017116248</p>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -78,54 +128,61 @@
     </footer>
 
     <script src="forCalendar.js"></script>
+
     <script>
-    $(function () {
-        $('.hamburger-button').on('click', function (event) {
-            event.preventDefault();
+        $(function () {
+            $('.hamburger-button').on('click', function (event) {
+                event.preventDefault();
 
-            $(this).toggleClass('active');
-            $('.overlay').toggleClass('visible');
+                $(this).toggleClass('active');
+                $('.overlay').toggleClass('visible');
 
+            });
         });
-    });
+
+
+
     </script>
-<!-- Code injected by live-server -->
-<script type="text/javascript">
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	
-</script>
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+
+
+
+    </script>
 </body>
+
 </html>
