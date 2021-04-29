@@ -12,14 +12,14 @@ function calendarMaker(target, date) {
         var year = nowDate.getFullYear();
         var month = nowDate.getMonth() + 1;
         $(target).empty().append(assembly(year, month));
-    } else {
+    } 
+    else {
         console.error("error");
         return;
     }
 
     var thisMonth = new Date(nowDate.getFullYear(), nowDate.getMonth(), 1);
     var thisLastDay = new Date(nowDate.getFullYear(), nowDate.getMonth() + 1, 0);
-
 
     var tag = "<tr>";
     var cnt = 0;
@@ -35,8 +35,8 @@ function calendarMaker(target, date) {
         if (cnt % 7 == 0) { 
             tag += "<tr>"; 
         }
-        if(today.getMonth() == nowDate.getMonth() && cnt == nowDate.getDate()){
-            tag += "<td style='color:orange; font-weight:bold'>" + cnt + "</td>";
+        if(today.getMonth() == nowDate.getMonth() && i == nowDate.getDate()){
+            tag += "<td style='color:orange; font-weight:bold'>" + nowDate.getDate() + "</td>";
         }
         else{
             tag += "<td>" + i + "</td>";
@@ -46,6 +46,7 @@ function calendarMaker(target, date) {
             tag += "</tr>";
         }
     }
+
     $(target).find("#custom_set_date").append(tag);
     calMoveEvtFn();
 
@@ -78,17 +79,17 @@ function calendarMaker(target, date) {
     }
 
     function calMoveEvtFn() {
-        //전달 클릭
+        //Prev클릭
         $(".custom_calendar_table").on("click", ".prev", function () {
             nowDate = new Date(nowDate.getFullYear(), nowDate.getMonth() - 1, nowDate.getDate());
             calendarMaker($(target), nowDate);
         });
-        //다음날 클릭
+        //Next클릭
         $(".custom_calendar_table").on("click", ".next", function () {
             nowDate = new Date(nowDate.getFullYear(), nowDate.getMonth() + 1, nowDate.getDate());
             calendarMaker($(target), nowDate);
         });
-        //일자 선택 클릭
+        //일자 클릭
         $(".custom_calendar_table").on("click", "td", function () {
             $(".custom_calendar_table .select_day").removeClass("select_day");
             $(this).removeClass("select_day").addClass("select_day");

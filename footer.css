@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
 *{
    padding: 0;
    margin: 0;
@@ -8,7 +9,6 @@
    box-sizing: border-box;
    font-family: 'Poppins', sans-serif;
  }
-
 .container{
 	max-width: 1170px;
 	margin: auto;
@@ -72,7 +72,6 @@ ul{
 	height: 1px;
 	box-sizing: border-box;
 }
-
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
 }
@@ -90,7 +89,6 @@ ul{
 	color: black;
 	padding-left: 8px;
 }
-
 .footer-col ul li p{
 	font-size: 16px;
 	text-transform: capitalize;
@@ -102,11 +100,9 @@ ul{
 	transition: all 0.3s ease;
 	overflow: visible;
 }
-
 .myname ul li p {
 	color:black;
 }
-
 .footer-col .social-links a{
 	display: inline-block;
 	height: 40px;
@@ -124,17 +120,16 @@ ul{
 	background-color: #ffffff;
 }
 
-/*responsive*/
 @media(max-width: 767px){
   .footer-col{
     width: 50%;
     margin-bottom: 30px;
-}
+	}
 }
 @media(max-width: 574px){
   .footer-col{
     width: 100%;
-}
+	}
 }
 
 

@@ -1,5 +1,6 @@
  @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+ 
  *{
     padding: 0;
     margin: 0;
@@ -22,7 +23,7 @@ header
   align-items: center;
   color: black;
 }
-  /* Hamburger button styles. */
+  /* 햄버거 버튼 */
 .toggle
 {
   position: relative;
@@ -43,7 +44,6 @@ header
   cursor: pointer;
 }
 
-/* Hamburger button styles. */
 .hamburger-button {
 	position: fixed;
 	transition: .3s ease-in-out;
@@ -56,48 +56,47 @@ header
   cursor: pointer;
 }
 
-	.hamburger-button span {
-		position: absolute;
-		height: 3px;
-		border-radius: 4px;
-		width: 100%;
-		background-color: black;
-		top: 0;
-		transition: transform .2s ease-in-out, opacity .2s ease-in-out;
-    cursor: pointer;
-	}
+.hamburger-button span {
+	position: absolute;
+ 	height: 3px;
+	border-radius: 4px;
+	width: 100%;
+	background-color: black;
+	top: 0;
+	transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+   cursor: pointer;
+}
 
-		.hamburger-button span:nth-child(1) {
-			top: 0px;
-		}
+.hamburger-button span:nth-child(1) {
+	top: 0px;
+}
 
-		.hamburger-button span:nth-child(2),
-		.hamburger-button span:nth-child(3) {
-			top: 10px;
-		}
+.hamburger-button span:nth-child(2),
+.hamburger-button span:nth-child(3) {
+	top: 10px;
+}
 
-		.hamburger-button span:nth-child(4) {
-			top: 20px;
-		}
+.hamburger-button span:nth-child(4) {
+	top: 20px;
+}
 
-	.hamburger-button.active span {
-		background-color: #FFF;
-    cursor: pointer;
-	}
+.hamburger-button.active span {
+ 	background-color: #FFF;
+  cursor: pointer;
+}
 
-		.hamburger-button.active span:nth-child(1),
-		.hamburger-button.active span:nth-child(4) {
-			opacity: 0;
-		}
+.hamburger-button.active span:nth-child(1),
+.hamburger-button.active span:nth-child(4) {
+	opacity: 0;
+}
 
-		.hamburger-button.active span:nth-child(2) {
-			transform: rotate(45deg);
-		}
+.hamburger-button.active span:nth-child(2) {
+	transform: rotate(45deg);
+}
 
-		.hamburger-button.active span:nth-child(3) {
-			transform: rotate(-45deg);
-		}
-
+.hamburger-button.active span:nth-child(3) {
+	transform: rotate(-45deg);
+}
 
 nav ul {
   list-style: none;
