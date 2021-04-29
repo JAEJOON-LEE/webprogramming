@@ -8,50 +8,111 @@
   <script src="jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="navi.css">
   <link rel="stylesheet" href="footer.css">
+  <style>
+    .clock {
+      text-align: center;
+      padding-bottom: 7.5%;
+    }
+
+    .date {
+      text-align: center;
+    }
+
+    .timeTogo {
+      text-align: center;
+      padding-top: 1.5%;
+
+      overflow: hidden;
+      font-size: 100%;
+      border-right: .1em solid #fff;
+      white-space: nowrap;
+
+      letter-spacing: .15em;
+      animation: typing 2s steps(25), blink-caret .75s step-end;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 9em;
+      }
+    }
+
+    @keyframes blink-caret {
+
+      from,
+      to {
+        border-color: black
+      }
+
+      50% {
+        border-color: black;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- <div class="loader"></div>
-    <script>
-      $('.insta').load(function(){
-        $('.loader').fadeOut();
-      })
-    </script> -->
-    <header>
-      <a href="#" class="hamburger-button">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-    </header>
-    
+  <header>
+    <a href="#" class="hamburger-button">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </header>
+
   <main>
     <div class="overlay">
       <nav class="menu">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><pre> </pre></li>
+          <li>
+            <pre> </pre>
+          </li>
           <li><a href="seoul.html">Seoul</a></li>
           <li><a href="daegu.html">Daegu</a></li>
           <li><a href="busan.html">Busan</a></li>
           <li><a href="jeju.html">Jeju</a></li>
-          <li><pre> </pre></li>
+          <li>
+            <pre> </pre>
+          </li>
           <li><a href="add_on.html">exp</a></li>
         </ul>
       </nav>
     </div>
 
-    <div class="insta">
-      <div data-mc-src="7d2e5efc-546c-4a62-af2f-72686292d54c#instagram"></div>
+    <div style="margin: 2rem;">
+        <h1 class="timeTogo">지금은 떠날 시간</h1>
+        <h3 class="date"></h3>
+        <h2 class="clock" style="color:#03a9f4">It's time TO GO</h2>
+    </div>
 
-      <script src="https://cdn2.woxo.tech/a.js#60857f97f96d9d0015eb53b5" async data-usrc>
-      </script>
+    <div class="insta">
 
       <div data-mc-src="6d9024da-9573-4646-943f-4e10fe4d6201#instagram"></div>
 
       <script src="https://cdn2.woxo.tech/a.js#60857f97f96d9d0015eb53b5" async data-usrc>
       </script>
+
+      <pre>
+
+
+
+      </pre>
+
+      <div data-mc-src="7d2e5efc-546c-4a62-af2f-72686292d54c#instagram"></div>
+
+      <script src="https://cdn2.woxo.tech/a.js#60857f97f96d9d0015eb53b5" async data-usrc>
+      </script>
+
+      <pre>
+
+        
+      </pre>
     </div>
     <br>
     <br>
@@ -59,52 +120,66 @@
   </main>
   <footer class="footer">
     <div class="container">
-        <div class="row">
-            <div class="footer-col">
-                <h4>Go To</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="explore.html">Explore</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5><pre> </pre></h5>
-                <ul>
-                    <li><a href="seoul.html">Seoul</a></li>
-                    <li><a href="daegu.html">Daegu</a></li>
-                    <li><a href="busan.html">Busan</a></li>
-                    <li><a href="jeju.html">Jeju</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5><pre> </pre></h5>
-                <ul>
-                    <li><a href="add_on.html">Add-On</a></li>
-                </ul>
-            </div>
-            <div class="footer-col myname">
-                <h5><pre> </pre></h5>
-                <ul>
-                    <li><p>Kyungpook National University</p></li>
-                    <li><p>Computer Science & Engineering</p></li>
-                    <li><p>Lee, Jaejoon / 2017116248</p></li>
-                </ul>
-            </div>
+      <div class="row">
+        <div class="footer-col">
+          <h4>Go To</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+          </ul>
         </div>
+        <div class="footer-col">
+          <h5>
+            <pre> </pre>
+          </h5>
+          <ul>
+            <li><a href="seoul.html">Seoul</a></li>
+            <li><a href="daegu.html">Daegu</a></li>
+            <li><a href="busan.html">Busan</a></li>
+            <li><a href="jeju.html">Jeju</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>
+            <pre> </pre>
+          </h5>
+          <ul>
+            <li><a href="add_on.html">Add-On</a></li>
+          </ul>
+        </div>
+        <div class="footer-col myname">
+          <h5>
+            <pre> </pre>
+          </h5>
+          <ul>
+            <li>
+              <p>Kyungpook National University</p>
+            </li>
+            <li>
+              <p>Computer Science & Engineering</p>
+            </li>
+            <li>
+              <p>Lee, Jaejoon / 2017116248</p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</footer>
+  </footer>
 
+  <script src="clock.js"></script>
   <script>
 
-  $(function() {
-    $('.hamburger-button').on('click', function(event){
-      event.preventDefault();
-      
-      $(this).toggleClass('active');
-      $('.overlay').toggleClass('visible');
-  
+    $(function () {
+      $('.hamburger-button').on('click', function (event) {
+        event.preventDefault();
+
+        $(this).toggleClass('active');
+        $('.overlay').toggleClass('visible');
+
+      });
     });
-  });
   </script>
 </body>
+
 </html>
