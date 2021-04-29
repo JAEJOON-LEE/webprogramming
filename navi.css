@@ -125,7 +125,7 @@ nav ul li a:hover {
 /* 메뉴가 내려오게 */
   .overlay {
     position: fixed;
-    background: url(PexelsVideos_background1.mp4);
+    background: url(pexels_background_img3.jpg);
     background-size: cover;
     top:0;
     left:0;
