@@ -181,6 +181,7 @@ nav ul li a:hover {
     animation-delay:0.38s;
   }
 
+  /*인스타위젯*/
   .insta {
     z-index: -1;
     padding-top: 100px;

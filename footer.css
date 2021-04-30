@@ -20,6 +20,7 @@
 ul{
 	list-style: none;
 }
+/*내용물들*/
 .footer{
     position: relative;
     width: 100%;
@@ -31,11 +32,6 @@ ul{
 .footer-col{
    width: 25%;
    padding: 0;
-}
-.myname {
-	width: 20%;
-	padding: 0;
-	white-space:nowrap;
 }
 .footer-col h4{
 	font-size: 18px;
@@ -55,6 +51,8 @@ ul{
 	box-sizing: border-box;
 	width: 50rem;
 }
+
+/*빈칸*/
 .footer-col h5{
 	font-size: 18px;
 	color: #03a9f4;
@@ -100,24 +98,16 @@ ul{
 	transition: all 0.3s ease;
 	overflow: visible;
 }
+/*내 소개 부분*/
+
+.myname {
+	width: 20%;
+	padding: 0;
+	white-space:nowrap;
+}
+
 .myname ul li p {
 	color:black;
-}
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #ffffff;
 }
 
 @media(max-width: 767px){

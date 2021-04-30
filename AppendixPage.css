@@ -7,6 +7,9 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+
+        /* 상세 정보 페이지 */
 .name
 {
   top: 0;
@@ -66,17 +69,22 @@
   letter-spacing: 6px;
   color:#fff;
 }
+
 body {
     width: 100%;
     height: 100%;
     
 }
+
+/*왼쪽에는 정보 */
 div.left {
     width: 50%;
     height: 100%;
     padding: 40px 100px;
     float: left;
 }
+
+/*지도 */
 div.right {
     width: 50%;
     height:100%;
@@ -86,6 +94,8 @@ div.right {
     color: #03a9f4;
     font-size: 20px;
 }
+
+/*지도 */
 #map_canvas {
   width: 50%; 
   height: 51rem;

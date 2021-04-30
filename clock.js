@@ -10,7 +10,7 @@ function getTime(){
 
     var printhour;
 
-
+    /*10이하면 앞에 0출력*/
     clock.innerHTML = `${hour<10 ? `0${hour}` :hour}:${minutes<10 ? `0${minutes}` :minutes}:${seconds<10 ? `0${seconds}` :seconds}`
 }
 function getDate(){
@@ -22,6 +22,7 @@ function getDate(){
 
     date.innerHTML = year + "년 "+ month +"월 " + day +"일";
 }
+/*1초마다 계속 업데이트*/
 function init(){
     setInterval(getDate, 1000);
     setInterval(getTime, 1000);

@@ -7,7 +7,7 @@
    list-style: none;
    box-sizing: border-box;
    font-family: 'Poppins', sans-serif;
- }
+ }/*이런거 다 style.css에서 부분 복사붙여넣기...*/
 
   body {
     background:hsl(217, 73%, 91%);
@@ -20,6 +20,9 @@
     z-index: -99;
     padding: 1px 2px;
   }
+
+  /*각 도시 spot,restuarant,cafe,hotel 탭 스타일*/
+  
   .tabs {
     position:relative;
     margin-top:15%;

@@ -17,6 +17,7 @@
     cursor: pointer;
 }
 
+/*월화수목금토일*/
 .custom_calendar_table thead.cal_week th {
     background-color: #288CFF;
     color: #fff;
@@ -27,14 +28,17 @@
     cursor: pointer;
 }
 
+/*일요일*/
 .custom_calendar_table tbody td:nth-child(1) {
     color: red;
 }
 
+/*토요일*/
 .custom_calendar_table tbody td:nth-child(7) {
     color: #288CFF;
 }
 
+/*클릭한 날*/
 .custom_calendar_table tbody td.select_day {
     background-color: #03a9f4;
     color: #fff;
