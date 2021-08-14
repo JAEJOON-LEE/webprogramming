@@ -124,7 +124,7 @@ nav ul li a:hover {
 /* 메뉴가 내려오게 */
   .overlay {
     position: fixed;
-    background: url(pexels_background_img3.jpg);
+    background: url(../images/pexels_background_img3.jpg);
     webkit-print-color-adjust:exact;
     background-size: cover;
     top:0;

@@ -5,12 +5,12 @@
      <meta charset="euc-kr">
      <title>상세페이지</title>
 
-     <link rel="stylesheet" href="AppendixPage.css">
+     <link rel="stylesheet" href="../styles/css/AppendixPage.css">
      <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
      <script>
           /*구글맵 좌표 및 이름, 클릭이벤트*/
           function initialize() {
-               var myLatlng = new google.maps.LatLng(37.57619420150589, 126.97685642383613);
+               var myLatlng = new google.maps.LatLng(33.48887569747188, 126.80090848243887);
                var mapOptions = {
                     zoom: 17,
                     center: myLatlng,
@@ -21,10 +21,10 @@
           var marker = new google.maps.Marker({
                position: myLatlng,
                map: map,
-               title: "광화문"
+               title: "메이즈랜드"
           });
           var infowindow = new google.maps.InfoWindow({
-               content: "<h1>광화문</h1>",
+               content: "<h1>메이즈랜드</h1>",
                maxWidth: 300
           }
           );
@@ -39,25 +39,23 @@
      <main>
           <div class="text">
                <div class="left">
-                    <div class="name">광화문</div>
+                    <div class="name">메이즈랜드</div>
                     <div>
-                         <p class="title">주소 :</p> 서울특별시 종로구 세종로 사직로 161<br>
+                         <p class="title">주소 :</p> 제주특별자치도 제주시 구좌읍 비자림로 2134-47 메이즈랜드<br>
                     </div>
                     <div>
-                         <p class="title">전화번호 :</p> 02-3700-3900<br>
+                         <p class="title">전화번호 :</p> 064-784-3838<br>
                     </div>
                     <div>
                          <p class="title">소개 :</p>
-                         1395년(태조 4년) 9월에 창건되어 정도전(鄭道傳)에 의해 사정문(四正門)으로 명명되었고 오문(午門)으로 불리기도 하였다. 그러다가 1425년(세종 7년) 집현전
-                         학사들이 광화문이라고 바꾸었다. 광화문은 석축기단(石築基壇)에 3개의 홍예문(虹霓門)를 만들고 그 위에 정면 3칸의 중층우진각 지붕으로 된 목조문루를 세웠다. 목조건축의
-                         양식은 다포식(多包式)으로 상하층이 모두 외이출목(外二出目)·내삼출목(內三出目), 외부는 제공(諸工) 뿌리를 쇠서로 하고, 내부는 운공(雲工)을 만들었으며, 첨차(墅遮)
-                         양측면에는 모두 파련초각(波蓮草刻)을 하였다. 이 건물은 섬세한 수법과 웅대한 구조를 보여주고, 전체적으로 균형과 조화를 이루어 장려한 외관을 지닌 가장 뛰어난
-                         궐문(闕門)으로 평가되었다.
+                         돌, 바람, 여자를 테마로 조성된 미로공원 <br>POINT1. 세계 최장 석축 미로입니다. <br>POINT2. 제주 신화 조각품들이 모여 있습니다. <br>POINT3. 걷기만 해도 건강해지는 건강미로공원 입니다. <br>POINT4. 출구를 찾아 떠나는 미로여행 <br>POINT5. 가장 제주다운 미로공원 <br>POINT6. 메이즈랜드 미로박물관
+                         <br>#세계최대_미로 #런닝맨
                          <br><br>
                     </div>
 
                     <div>
-                         <a href="https://map.naver.com/v5/entry/place/13161322?c=14134998.0227795,4519702.3732454,15,0,0,0,dh&placePath=%3Fentry=plt%26from=nx" target="_blank">상세
+                         <a href="http://naver.me/xJNaNsaF" target="_blank">
+                            상세
                               정보 보기</a>
                          <a href="javascript:history. back();">돌아가기</a>
                     </div>
@@ -65,6 +63,7 @@
           </div>
           <div class="right" id="map_canvas"></div>
      </main>
+
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXN39vgYVG-KDqhCBGrNou35GGCDDyKo4"
 type="text/javascript"></script>
 </body>

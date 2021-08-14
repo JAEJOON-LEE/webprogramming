@@ -5,12 +5,12 @@
      <meta charset="euc-kr">
      <title>상세페이지</title>
 
-     <link rel="stylesheet" href="AppendixPage.css">
+     <link rel="stylesheet" href="../styles/css/AppendixPage.css">
      <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
      <script>
           /*구글맵 좌표 및 이름, 클릭이벤트*/
           function initialize() {
-               var myLatlng = new google.maps.LatLng(35.15880194267429, 129.1603841666556);
+               var myLatlng = new google.maps.LatLng(37.57619420150589, 126.97685642383613);
                var mapOptions = {
                     zoom: 17,
                     center: myLatlng,
@@ -21,10 +21,10 @@
           var marker = new google.maps.Marker({
                position: myLatlng,
                map: map,
-               title: "해운대"
+               title: "광화문"
           });
           var infowindow = new google.maps.InfoWindow({
-               content: "<h1>해운대</h1>",
+               content: "<h1>광화문</h1>",
                maxWidth: 300
           }
           );
@@ -39,22 +39,25 @@
      <main>
           <div class="text">
                <div class="left">
-                    <div class="name">해운대</div>
+                    <div class="name">광화문</div>
                     <div>
-                         <p class="title">주소 :</p> 부산광역시 해운대구 우동<br>
+                         <p class="title">주소 :</p> 서울특별시 종로구 세종로 사직로 161<br>
                     </div>
                     <div>
-                         <p class="title">전화번호 :</p> 051-749-7601<br>
+                         <p class="title">전화번호 :</p> 02-3700-3900<br>
                     </div>
                     <div>
                          <p class="title">소개 :</p>
-                         해운대 해수욕장은 모래사장이 넓게 펼쳐진 동해안 해변으로 젊은이들에게 어울리는 현대적인 지역입니다. 식사는 현지 가정식 백반부터 푸드 트럭과 세계 각국의 메뉴를 선보이는 고급 레스토랑까지 다양하게 즐길 수 있으며, 편안한 맥줏집과 세련된 칵테일 가게가 어우러져 있습니다.
+                         1395년(태조 4년) 9월에 창건되어 정도전(鄭道傳)에 의해 사정문(四正門)으로 명명되었고 오문(午門)으로 불리기도 하였다. 그러다가 1425년(세종 7년) 집현전
+                         학사들이 광화문이라고 바꾸었다. 광화문은 석축기단(石築基壇)에 3개의 홍예문(虹霓門)를 만들고 그 위에 정면 3칸의 중층우진각 지붕으로 된 목조문루를 세웠다. 목조건축의
+                         양식은 다포식(多包式)으로 상하층이 모두 외이출목(外二出目)·내삼출목(內三出目), 외부는 제공(諸工) 뿌리를 쇠서로 하고, 내부는 운공(雲工)을 만들었으며, 첨차(墅遮)
+                         양측면에는 모두 파련초각(波蓮草刻)을 하였다. 이 건물은 섬세한 수법과 웅대한 구조를 보여주고, 전체적으로 균형과 조화를 이루어 장려한 외관을 지닌 가장 뛰어난
+                         궐문(闕門)으로 평가되었다.
                          <br><br>
                     </div>
 
                     <div>
-                         <a href="http://naver.me/GcjWfo4L" target="_blank">
-                            상세
+                         <a href="https://map.naver.com/v5/entry/place/13161322?c=14134998.0227795,4519702.3732454,15,0,0,0,dh&placePath=%3Fentry=plt%26from=nx" target="_blank">상세
                               정보 보기</a>
                          <a href="javascript:history. back();">돌아가기</a>
                     </div>
